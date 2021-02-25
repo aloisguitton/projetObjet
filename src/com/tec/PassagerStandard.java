@@ -15,7 +15,7 @@ class PassagerStandard {
     
     @Override
     public String toString() {
-    	return nom() + "<" + placeOccupee + ">";
+    	return nom() + placeOccupee;
     }
 
     //methods
