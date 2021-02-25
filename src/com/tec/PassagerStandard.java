@@ -15,7 +15,6 @@ class PassagerStandard {
     
     @Override
     public String toString() {
-    	
     	return nom() + "<" + placeOccupee + ">";
     }
 
@@ -37,20 +36,23 @@ class PassagerStandard {
     }
 
     public void changerEnDehors() {
-        this.placeOccupee.dehors();
+        this.placeOccupee = this.placeOccupee.dehors();
     }
 
     public void changerEnAssis() {
-        this.placeOccupee.assis();
+        this.placeOccupee = this.placeOccupee.assis();
+
     }
 
     public void changerEnDebout() {
-        this.placeOccupee.debout();
+        this.placeOccupee = this.placeOccupee.debout();
     }
 
     public void monterDans(Autobus t) {
         if(t.aPlaceAssise()){
             t.monteeDemanderAssis(this);
+        } else if(t.aPlaceDebout()) {
+            t.monteeDemanderDebout(this);
         }
     }
 
