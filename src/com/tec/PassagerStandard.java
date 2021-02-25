@@ -15,22 +15,23 @@ class PassagerStandard {
 
     //methods
     public String nom() {
-        return null;
+        return this.nom;
     }
 
     public boolean estDehors() {
-        return false;
+        return this.placeOccupee.estDehors();
     }
 
     public boolean estAssis() {
-        return false;
+        return this.placeOccupee.estAssis();
     }
 
     public boolean estDebout() {
-        return false;
+        return this.placeOccupee.estDebout();
     }
 
     public void changerEnDehors() {
+        this.placeOccupee.dehors();
     }
 
     public void changerEnAssis() {
