@@ -2,8 +2,15 @@ package com.tec;//source without documentation for javadoc
 
 class PassagerStandard {
 
+    private Position placeOccupee;
+    private String nom;
+    private int destination;
+
     // constructor
     public PassagerStandard(String nom, int destination) {
+        this.nom = nom;
+        this.destination = destination;
+        this.placeOccupee = new Position();
     }
 
     //methods
