@@ -18,6 +18,14 @@ class Autobus {
         this.arretCourant = 0;
     }
 
+    @Override
+    public String toString() {
+        return   "[ arret:" + arretCourant +
+                ", assis:" + jaugeAssise.toString() +
+                ", debout: " + jaugeDebout.toString() +
+                ']';
+    }
+
     //methods
     public boolean aPlaceAssise() {
         return this.jaugeAssise.estVert();
