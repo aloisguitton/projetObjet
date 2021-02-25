@@ -43,5 +43,9 @@ class PassagerStandard {
     }
 
     public void nouvelArret(Autobus t, int numeroArret) {
+    	if(numeroArret == destination) {
+    		t.arretDemanderSortie(this);
+    	}
+    	
     }
 }
