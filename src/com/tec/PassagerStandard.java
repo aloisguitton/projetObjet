@@ -34,12 +34,17 @@ class PassagerStandard {
     }
 
     public void changerEnAssis() {
+        this.placeOccupee.assis();
     }
 
     public void changerEnDebout() {
+        this.placeOccupee.debout();
     }
 
     public void monterDans(Autobus t) {
+        if(t.aPlaceAssise()){
+            t.monteeDemanderAssis(this);
+        }
     }
 
     public void nouvelArret(Autobus t, int numeroArret) {
