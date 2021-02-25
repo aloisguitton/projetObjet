@@ -48,8 +48,9 @@ class Autobus {
     }
 
     public void allerArretSuivant() {
+        ArrayList<PassagerStandard> clone = new ArrayList<>(passagerStandards);
         this.arretCourant ++;
-        Iterator<PassagerStandard> it = this.passagerStandards.iterator();
+        Iterator<PassagerStandard> it = clone.iterator();
         while(it.hasNext()) {
             it.next().nouvelArret(this,this.arretCourant);
         }
