@@ -12,6 +12,12 @@ class PassagerStandard {
         this.destination = destination;
         this.placeOccupee = new Position();
     }
+    
+    @Override
+    public String toString() {
+    	
+    	return nom() + "<" + placeOccupee + ">";
+    }
 
     //methods
     public String nom() {
