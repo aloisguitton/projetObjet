@@ -18,7 +18,7 @@ class Position {
 	  /**
 	   * Fournit une instance de Position dehors.
 	   *
-	   * @return instance dans l'état dehors.
+	   * @return instance dans l'etat dehors.
 	   */
 	  public static Position creer() {
 	    return DEHORS;

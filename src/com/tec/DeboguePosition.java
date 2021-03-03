@@ -3,7 +3,7 @@ package com.tec;
 public class DeboguePosition {
 
     public static void main(String[] args){
-        Position p1 = new Position();
+        Position p1 = Position.creer();;
 
 
         System.out.println(p1.estAssis());
