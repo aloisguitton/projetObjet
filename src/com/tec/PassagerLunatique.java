@@ -63,10 +63,10 @@ class PassagerLunatique implements Passager, Usager{
         }
         else{
             if(estAssis()){
-                changerEnDebout();
+                t.arretDemanderDebout(this);
             }
             else if(estDebout()){
-                changerEnAssis();
+                t.arretDemanderAssis(this);
             }
         }
     }
