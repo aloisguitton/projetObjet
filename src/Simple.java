@@ -1,6 +1,4 @@
-import com.tec.Autobus;
-import com.tec.Usager;
-import com.tec.PassagerStandard;
+import com.tec.*;
 
 class Simple {
 
@@ -20,8 +18,8 @@ class Simple {
 	    Autobus serenity = new Autobus(1, 2);
 
 	    Usager kaylee = new PassagerStandard("Kaylee", 4);
-		Usager jayne = new PassagerStandard("Jayne", 4);
-		Usager inara = new PassagerStandard("Inara", 5);
+		Usager jayne = new PassagerLunatique("Jayne", 4);
+		Usager inara = new PassagerStresse("Inara", 5);
 
 	    System.out.println(serenity);
 
