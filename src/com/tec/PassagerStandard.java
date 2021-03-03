@@ -1,6 +1,6 @@
 package com.tec;//source without documentation for javadoc
 
-public class PassagerStandard {
+public class PassagerStandard implements Passager{
 
     private Position placeOccupee;
     private String nom;
