@@ -1,9 +1,9 @@
 package com.tec;
 
-public interface Passager {
+interface Passager {
 
     public String toString();
-	
+
     public String nom();
 
     public boolean estDehors();
@@ -17,8 +17,6 @@ public interface Passager {
     public void changerEnAssis();
 
     public void changerEnDebout();
-
-    public void monterDans(Autobus t);
 
     public void nouvelArret(Autobus t, int numeroArret);
 }
