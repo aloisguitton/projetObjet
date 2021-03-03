@@ -10,7 +10,7 @@ public class Autobus {
     private int arretCourant;
 
     // constructor
-    public Autobus(int nbPlaceAssise, int nbPlaceDebout) {
+    Autobus(int nbPlaceAssise, int nbPlaceDebout) {
         int placeTotal = nbPlaceAssise+nbPlaceDebout;
         this.passager = new ArrayList<Passager>(placeTotal);
         this.jaugeAssise = new Jauge(nbPlaceAssise,0);
@@ -19,7 +19,7 @@ public class Autobus {
     }
 
     @Override
-    public String toString() {
+	public String toString() {
         return   "[ arret:" + arretCourant +
                 ", assis:" + jaugeAssise.toString() +
                 ", debout: " + jaugeDebout.toString() +
@@ -27,21 +27,21 @@ public class Autobus {
     }
 
     //methods
-    public boolean aPlaceAssise() {
+    boolean aPlaceAssise() {
         return this.jaugeAssise.estVert();
     }
 
-    public boolean aPlaceDebout() {
+    boolean aPlaceDebout() {
         return this.jaugeDebout.estVert();
     }
 
-    public void monteeDemanderAssis(Passager p) {
+    void monteeDemanderAssis(Passager p) {
         this.jaugeAssise.incrementer();
         p.changerEnAssis();
         this.passager.add(p);
     }
 
-    public void monteeDemanderDebout(Passager p) {
+    void monteeDemanderDebout(Passager p) {
         this.jaugeDebout.incrementer();
         p.changerEnDebout();
         this.passager.add(p);
@@ -56,19 +56,19 @@ public class Autobus {
         }
     }
 
-    public void arretDemanderAssis(Passager p) {
+    void arretDemanderAssis(Passager p) {
         this.jaugeDebout.decrementer();
         this.jaugeAssise.incrementer();
         p.changerEnAssis();
     }
 
-    public void arretDemanderDebout(Passager p) {
+    void arretDemanderDebout(Passager p) {
         this.jaugeAssise.decrementer();
         this.jaugeDebout.incrementer();
         p.changerEnDebout();
     }
 
-    public void arretDemanderSortie(Passager p) {
+    void arretDemanderSortie(Passager p) {
         if (p.estAssis()){
             this.jaugeAssise.decrementer();
             this.passager.remove(p);
