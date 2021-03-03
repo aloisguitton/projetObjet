@@ -1,4 +1,5 @@
 import com.tec.Autobus;
+import com.tec.Passager;
 import com.tec.PassagerStandard;
 
 class Simple {
@@ -18,9 +19,9 @@ class Simple {
 	  static public void main (String[] args) {
 	    Autobus serenity = new Autobus(1, 2);
 
-	    PassagerStandard kaylee = new PassagerStandard("Kaylee", 4);
-	    PassagerStandard jayne = new PassagerStandard("Jayne", 4);
-	    PassagerStandard inara = new PassagerStandard("Inara", 5);
+	    Passager kaylee = new PassagerStandard("Kaylee", 4);
+	    Passager jayne = new PassagerStandard("Jayne", 4);
+		Passager inara = new PassagerStandard("Inara", 5);
 
 	    System.out.println(serenity);
 
