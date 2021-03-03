@@ -9,17 +9,18 @@ class Simple {
 	   * La methodes toString() doit etre redefinie dans les
 	   * deux classes PassagerStandard et Autobus.
 	   */
-	  static private void deboguerEtat (Autobus t, PassagerStandard p) {
+	  static private void deboguerEtat (Autobus t, Usager p) {
 	    System.out.println(p);
 	    System.out.println(t);
 	  }
 
 	  static public void main (String[] args) {
+
 	    Autobus serenity = new Autobus(1, 2);
 
-	    Usager kaylee = new PassagerStandard("Kaylee", 4);
-		Usager jayne = new PassagerLunatique("Jayne", 4);
-		Usager inara = new PassagerStresse("Inara", 5);
+	    Usager kaylee = FabriqueTec.fairePassagerStandard("Kaylee", 4);
+		Usager jayne = FabriqueTec.fairePassagerLunatique("Jayne", 4);
+		Usager inara = FabriqueTec.fairePassagerStresse("Inara", 5);
 
 	    System.out.println(serenity);
 
