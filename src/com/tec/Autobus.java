@@ -10,7 +10,7 @@ public class Autobus {
     private int arretCourant;
 
     // constructor
-    Autobus(int nbPlaceAssise, int nbPlaceDebout) {
+    public Autobus(int nbPlaceAssise, int nbPlaceDebout) {
         int placeTotal = nbPlaceAssise+nbPlaceDebout;
         this.passager = new ArrayList<Passager>(placeTotal);
         this.jaugeAssise = new Jauge(nbPlaceAssise,0);

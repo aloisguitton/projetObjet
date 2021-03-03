@@ -11,114 +11,62 @@ package com.tec;
  * @since 2007-2019
  **/
 class Position {
+	  private static final Position DEHORS = new Position();
+	  private static final Position ASSIS  = new Position();
+	  private static final Position DEBOUT = new Position();
 
-    private final int DEHORS = 1;
-    private final int ASSIS  = 2;
-    private final int DEBOUT = 3;
+	  /**
+	   * Fournit une instance de Position dehors.
+	   *
+	   * @return instance dans l'état dehors.
+	   */
+	  public static Position creer() {
+	    return DEHORS;
+	  }
 
-    private final int COURANT;
+	  //instanciation possible uniquement dans la classe.  
+	  private Position() {
+	  }
 
-    /**
-     * initialise l'instance 'a dehors.
-     *
-     */
-    public Position() {
-        COURANT = DEHORS;
-    }
+	  public boolean estDehors() {
+	    return this == DEHORS;
+	  }
 
-    /**
-     * Initialise l'instance 'a une des trois positions.
-     *
-     * @param e valeur d'une des positions.
-     */
-    private Position(int e) {
-        COURANT = e;
-    }
+	  public boolean estAssis() {
+	    return this == ASSIS;
+	  }
 
-    /**
-     * La position est-elle dehors ?
-     *
-     * @return vrai si l''etat de l'instance est dehors;
-     */
-    public boolean estDehors() {
-        return COURANT == DEHORS;
-    }
+	  public boolean estDebout() {
+	    return this == DEBOUT;
+	  }
 
-    /**
-     * La position est-elle assis ?
-     *
-     * @return vrai si l''etat de l'instance est assis;
-     */
-    public boolean estAssis() {
-        return COURANT == ASSIS;
-    }
+	  public boolean estInterieur() {
+	    return this != DEHORS;
+	  }
 
-    /**
-     * La position est-elle debout ?
-     *
-     * @return vrai si l''etat de l'instance est debout;
-     */
-    public boolean estDebout() {
-        return COURANT == DEBOUT;
-    }
+	  public Position assis() {
+	    return ASSIS;
+	  }
 
-    /**
-     * La position est-elle assis ou debout ?
-     *
-     * @return vrai la position est assis ou debout.
-     */
-    public boolean estInterieur() {
-        return !estDehors();
-    }
+	  public Position debout() {
+	    return DEBOUT;
+	  }
 
+	  public Position dehors() {
+	    return DEHORS;
+	  }
 
-    /**
-     * Fournit une instance de Position assis.
-     *
-     * @return instance dans l''etat assis.
-     */
-    public Position assis() {
-        return new Position(ASSIS);
-    }
+	  @Override
+	  public String toString() {
+	    String nom = null;
 
-    /**
-     * Fournit une instance de Position debout.
-     *
-     * @return instance dans l''etat debout.
-     */
-    public Position debout() {
-        return new Position(DEBOUT);
-    }
+	    if (this == DEHORS)
+	      nom = "endehors";
+	    else if (this == ASSIS)
+	      nom = "assis";
+	    else if (this == DEBOUT)
+	      nom = "debout";
 
-    /**
-     * Fournit une instance de Position dehors.
-     *
-     * @return instance dans l''etat dehors.
-     */
-    public Position dehors() {
-        return new Position(DEHORS);
-    }
-
-    /**
-     * Cette m'ethode est h'erit'ee de la classe {@link java.lang.Object}.
-     * Tr`es utile pour le d'ebogage, elle permet de fournir une
-     * cha^ine de caract`eres correspondant 'a l''etat d'un objet.
-     * Mais, il faut adapter son code 'a chaque classe.
-     */
-    @Override
-    public String toString() {
-        String nom = null;
-        switch(COURANT) {
-            case DEHORS :
-                nom = "endehors";
-                break;
-            case ASSIS :
-                nom = "assis";
-                break;
-            case DEBOUT :
-                nom = "debout";
-                break;
-        }
-        return "<" + nom + ">";
-    }
-}
+	    return "<" + nom + ">";
+	  }
+	}
