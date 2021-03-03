@@ -1,6 +1,6 @@
 package com.tec;
 
-public class DeboguePosition {
+class DeboguePosition {
 
     public static void main(String[] args){
         Position p1 = Position.creer();;
