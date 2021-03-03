@@ -51,7 +51,9 @@ class PassagerLunatique implements Passager, Usager{
         if(t.aPlaceAssise()){
             t.monteeDemanderAssis(this);
         } else if(t.aPlaceDebout()) {
-            t.monteeDemanderDebout(this);
+            if(Math.random()%2 == 0){
+                t.monteeDemanderDebout(this);
+            }
         }
     }
 
@@ -59,6 +61,16 @@ class PassagerLunatique implements Passager, Usager{
         if(numeroArret == destination) {
             t.arretDemanderSortie(this);
         }
-
+        else{
+            if(estAssis()){
+                changerEnDebout();
+            }
+            else if(estDebout()){
+                changerEnAssis();
+            }
+        }
     }
+
+
+
 }
