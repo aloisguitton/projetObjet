@@ -12,13 +12,14 @@ public class DeboguePosition {
         System.out.println(p1.estInterieur());
 
 
-        p1 = Position.debout();
+        p1 = p1.assis();
+        p1.toString();
+        p1 = p1.debout();
+        p1.toString();
+        p1 = p1.dehors();
+        p1.toString();
+
     }
 
-    private void testPosition(Position p){
-        System.out.println(p.estAssis());
-        System.out.println(p.estDebout());
-        System.out.println(p.estDehors());
-        System.out.println(p.estInterieur());
-    }
+
 }
