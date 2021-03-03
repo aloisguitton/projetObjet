@@ -1,6 +1,6 @@
 package com.tec;
 
-public class DebogueJauge {
+class DebogueJauge {
 
     public static void main(String[] args){
         Jauge j1 = new Jauge(5,0);
