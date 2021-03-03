@@ -41,7 +41,7 @@ public class Autobus {
         this.passager.add(p);
     }
 
-    public void monteeDemanderDebout(PassagerStandard p) {
+    public void monteeDemanderDebout(Passager p) {
         this.jaugeDebout.incrementer();
         p.changerEnDebout();
         this.passager.add(p);
