@@ -1,6 +1,6 @@
 package com.tec;
 
-public class PassagerLunatique implements Passager, Usager{
+class PassagerLunatique implements Passager, Usager{
     private Position placeOccupee;
     private String nom;
     private int destination;

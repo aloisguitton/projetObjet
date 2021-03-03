@@ -1,6 +1,6 @@
 package com.tec;
 
-public class PassagerStresse implements Passager, Usager{
+class PassagerStresse implements Passager, Usager{
     private Position placeOccupee;
     private String nom;
     private int destination;
