@@ -2,7 +2,7 @@ package com.tec;
 
 public class DebogueJauge {
 
-    public static void main(String args){
+    public static void main(String[] args){
         Jauge j1 = new Jauge(5,0);
 
         System.out.println("estRouge : "+j1.estRouge());
