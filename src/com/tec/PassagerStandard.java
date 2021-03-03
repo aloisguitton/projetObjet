@@ -10,7 +10,6 @@ public class PassagerStandard implements Passager, Usager{
     public PassagerStandard(String nom, int destination) {
         this.nom = nom;
         this.destination = destination;
-        this.placeOccupee = new Position();
     }
     
     @Override
