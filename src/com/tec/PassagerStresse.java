@@ -50,13 +50,18 @@ class PassagerStresse implements Passager, Usager{
     public void monterDans(Autobus t) {
         if(t.aPlaceAssise()){
             t.monteeDemanderAssis(this);
-        } else if(t.aPlaceDebout()) {
-            t.monteeDemanderDebout(this);
         }
     }
 
     public void nouvelArret(Autobus t, int numeroArret) {
-        if(numeroArret == destination) {
+        while(numeroArret >= (destination - 3)  && numeroArret != destination) {
+        	if(this.estAssis()) {
+        		if(t.aPlaceDebout()) {
+        			this.changerEnDebout();
+        		}
+        	}
+        }
+    	if(numeroArret == destination) {
             t.arretDemanderSortie(this);
         }
 
