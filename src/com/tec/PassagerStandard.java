@@ -1,6 +1,6 @@
 package com.tec;//source without documentation for javadoc
 
-class PassagerStandard {
+public class PassagerStandard {
 
     private Position placeOccupee;
     private String nom;

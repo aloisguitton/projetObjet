@@ -3,7 +3,7 @@ package com.tec;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-class Autobus {
+public class Autobus {
     private final ArrayList<PassagerStandard> passagerStandards;
     private Jauge jaugeAssise;
     private Jauge jaugeDebout;

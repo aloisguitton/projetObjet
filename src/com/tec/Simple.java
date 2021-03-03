@@ -1,4 +1,5 @@
-package com.tec;
+import com.tec.Autobus;
+import com.tec.PassagerStandard;
 
 class Simple {
 
