@@ -2,9 +2,9 @@ package com.tec;//source without documentation for javadoc
 
 class PassagerStandard implements Passager, Usager{
 
-    private Position placeOccupee;
-    private String nom;
-    private int destination;
+    protected Position placeOccupee;
+    protected String nom;
+    protected int destination;
 
     // constructor
     public PassagerStandard(String nom, int destination) {
