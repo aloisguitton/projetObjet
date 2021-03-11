@@ -57,7 +57,7 @@ class PassagerStresse implements Passager, Usager{
         while(numeroArret >= (destination - 3)  && numeroArret != destination) {
         	if(this.estAssis()) {
         		if(t.aPlaceDebout()) {
-        			this.changerEnDebout();
+        			t.monteeDemanderDebout(this);
         		}
         	}
         }
