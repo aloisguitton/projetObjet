@@ -1,6 +1,6 @@
 package com.tec;
 
-class PassagerStresse extends PassagerStandard implements Passager, Usager{
+class PassagerStresse extends PassagerAbstrait{
 
 
     // constructor
@@ -24,9 +24,7 @@ class PassagerStresse extends PassagerStandard implements Passager, Usager{
         		}
         	}
         }
-    	if(numeroArret == destination) {
-            t.arretDemanderSortie(this);
-        }
+        super.sortirADestination(t, numeroArret);
     }
 
     

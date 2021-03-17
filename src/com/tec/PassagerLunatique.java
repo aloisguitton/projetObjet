@@ -1,6 +1,6 @@
 package com.tec;
 
-class PassagerLunatique extends PassagerStandard implements Passager, Usager{
+class PassagerLunatique extends PassagerAbstrait{
 
     // constructor
     public PassagerLunatique(String nom, int destination) {
@@ -15,20 +15,16 @@ class PassagerLunatique extends PassagerStandard implements Passager, Usager{
         }
     }
 
-    public void nouvelArret(Autobus t, int numeroArret) {
-        if(numeroArret == destination) {
-            t.arretDemanderSortie(this);
-        }
-        else{
-            if(estAssis()){
-                t.arretDemanderDebout(this);
+    public void nouvelArret(Autobus t, int numeroArret) {    
+    	super.sortirADestination(t, numeroArret);
+    	if(!estDehors()) {
+        	if(estAssis()){
+    	    	t.arretDemanderDebout(this);
+    	    }
+    	    else if(estDebout()){
+    	    	t.arretDemanderAssis(this);
             }
-            else if(estDebout()){
-                t.arretDemanderAssis(this);
-            }
-        }
+    	}    
     }
-
-
-
 }
+

@@ -1,72 +1,21 @@
 package com.tec;//source without documentation for javadoc
 
-class PassagerStandard implements Passager, Usager{
-
-    protected Position placeOccupee;
-    protected String nom;
-    protected int destination;
-
-    // constructor
-    public PassagerStandard(String nom, int destination) {
-        this.nom = nom;
-        this.destination = destination;
-        this.placeOccupee = Position.creer();
-    }
+class PassagerStandard extends PassagerAbstrait{
     
-    @Override
-    public String toString() {
-    	return nom() + placeOccupee;
+	// constructor
+    public PassagerStandard(String nom, int destination) {
+    	super(nom, destination);
     }
 
-    //methods
-    public String nom() {
-        return this.nom;
-    }
+	@Override
+	public void nouvelArret(Autobus t, int numeroArret) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    public boolean estDehors() {
-        return this.placeOccupee.estDehors();
-    }
-
-    public boolean estAssis() {
-        return this.placeOccupee.estAssis();
-    }
-
-    public boolean estDebout() {
-        return this.placeOccupee.estDebout();
-    }
-
-    public void changerEnDehors() {
-        this.placeOccupee = this.placeOccupee.dehors();
-    }
-
-    public void changerEnAssis() {
-        this.placeOccupee = this.placeOccupee.assis();
-
-    }
-
-    public void changerEnDebout() {
-        this.placeOccupee = this.placeOccupee.debout();
-    }
-
-    public void monterDans(Autobus t) {
-        if(t.aPlaceDebout()) {
-            t.monteeDemanderDebout(this);
-        }
-    }
-
-    public void nouvelArret(Autobus t, int numeroArret) {
-        if(estDebout()){
-            if(numeroArret == destination){
-                t.arretDemanderSortie(this);
-            }
-            else if(t.aPlaceAssise()){
-                t.arretDemanderAssis(this);
-            }
-        }
-        else if(estAssis()){
-            if(numeroArret == destination-1) {
-                t.arretDemanderSortie(this);
-            }
-        }
-    }
+	@Override
+	public void monterDans(Autobus t) {
+		// TODO Auto-generated method stub
+		
+	}
 }
