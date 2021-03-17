@@ -6,16 +6,15 @@ class PassagerStandard extends PassagerAbstrait{
     public PassagerStandard(String nom, int destination) {
     	super(nom, destination);
     }
-
-	@Override
-	public void nouvelArret(Autobus t, int numeroArret) {
-		// TODO Auto-generated method stub
-		
-	}
-
+    
 	@Override
 	public void monterDans(Autobus t) {
-		// TODO Auto-generated method stub
+		monteAssisDebout(t);
+	}
+
+	@Override
+	void faireChoixArret(Autobus t, int numeroArret) {
 		
 	}
+
 }

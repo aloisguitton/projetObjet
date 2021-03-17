@@ -52,4 +52,23 @@ abstract class PassagerAbstrait implements Passager, Usager {
             t.arretDemanderSortie(this);
         }
     }
+    
+    protected void monteAssisDebout(Autobus t) {
+        if(t.aPlaceAssise()){
+            t.monteeDemanderAssis(this);
+        } else if(t.aPlaceDebout()) {
+            t.monteeDemanderDebout(this);
+        }
+    }
+    
+    abstract void faireChoixArret(Autobus t, int numeroArret);
+    
+    public void nouvelArret(Autobus t, int numeroArret) {
+    	sortirADestination(t, numeroArret);
+    	if(!estDehors()) {
+    		faireChoixArret(t, numeroArret);
+    	}
+    }
+    
+    
 }

@@ -8,23 +8,17 @@ class PassagerLunatique extends PassagerAbstrait{
     }
     
     public void monterDans(Autobus t) {
-        if(t.aPlaceAssise()){
-            t.monteeDemanderAssis(this);
-        } else if(t.aPlaceDebout()) {
-            t.monteeDemanderDebout(this);
-        }
+    	monteAssisDebout(t);
     }
 
-    public void nouvelArret(Autobus t, int numeroArret) {    
-    	super.sortirADestination(t, numeroArret);
-    	if(!estDehors()) {
-        	if(estAssis()){
-    	    	t.arretDemanderDebout(this);
-    	    }
-    	    else if(estDebout()){
-    	    	t.arretDemanderAssis(this);
-            }
-    	}    
-    }
+	@Override
+	void faireChoixArret(Autobus t, int numeroArret) {
+		if(estAssis()){
+	    	t.arretDemanderDebout(this);
+	    }
+	    else if(estDebout()){
+	    	t.arretDemanderAssis(this);
+        }
+	}
 }
 
