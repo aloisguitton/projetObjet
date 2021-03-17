@@ -6,6 +6,14 @@ class PassagerLunatique extends PassagerStandard implements Passager, Usager{
     public PassagerLunatique(String nom, int destination) {
     	super(nom, destination);
     }
+    
+    public void monterDans(Autobus t) {
+        if(t.aPlaceAssise()){
+            t.monteeDemanderAssis(this);
+        } else if(t.aPlaceDebout()) {
+            t.monteeDemanderDebout(this);
+        }
+    }
 
     public void nouvelArret(Autobus t, int numeroArret) {
         if(numeroArret == destination) {
