@@ -27,6 +27,7 @@ class PassagerStresse extends PassagerStandard implements Passager, Usager{
     	if(numeroArret == destination) {
             t.arretDemanderSortie(this);
         }
-
     }
+
+    
 }

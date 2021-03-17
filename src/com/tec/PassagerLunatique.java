@@ -47,7 +47,7 @@ class PassagerLunatique implements Passager, Usager{
         this.placeOccupee = this.placeOccupee.debout();
     }
 
-    public void monterDans(Autobus t) {
+    public void monterDans(Autobus t) { //C'est le même que celui de PassagerStandard
         if(t.aPlaceAssise()){
             t.monteeDemanderAssis(this);
         } else if(t.aPlaceDebout()) {

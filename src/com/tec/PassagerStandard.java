@@ -49,17 +49,24 @@ class PassagerStandard implements Passager, Usager{
     }
 
     public void monterDans(Autobus t) {
-        if(t.aPlaceAssise()){
-            t.monteeDemanderAssis(this);
-        } else if(t.aPlaceDebout()) {
+        if(t.aPlaceDebout()) {
             t.monteeDemanderDebout(this);
         }
     }
 
     public void nouvelArret(Autobus t, int numeroArret) {
-    	if(numeroArret == destination) {
-    		t.arretDemanderSortie(this);
-    	}
-    	
+        if(estDebout()){
+            if(numeroArret == destination){
+                t.arretDemanderSortie(this);
+            }
+            else if(t.aPlaceAssise()){
+                t.arretDemanderAssis(this);
+            }
+        }
+        else if(estAssis()){
+            if(numeroArret == destination-1) {
+                t.arretDemanderSortie(this);
+            }
+        }
     }
 }
