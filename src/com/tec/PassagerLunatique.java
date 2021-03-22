@@ -12,7 +12,7 @@ class PassagerLunatique extends PassagerAbstrait{
     }
 
 	@Override
-	void faireChoixArret(Autobus t, int numeroArret) {
+	protected void faireChoixArret(Autobus t, int numeroArret) {
 		if(estAssis()){
 	    	t.arretDemanderDebout(this);
 	    }

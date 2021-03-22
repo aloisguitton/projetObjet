@@ -61,7 +61,7 @@ abstract class PassagerAbstrait implements Passager, Usager {
         }
     }
     
-    abstract void faireChoixArret(Autobus t, int numeroArret);
+    protected abstract void faireChoixArret(Autobus t, int numeroArret);
     
     public void nouvelArret(Autobus t, int numeroArret) {
     	sortirADestination(t, numeroArret);

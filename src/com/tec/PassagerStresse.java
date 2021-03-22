@@ -15,7 +15,7 @@ class PassagerStresse extends PassagerAbstrait{
     }
 
 	@Override
-	void faireChoixArret(Autobus t, int numeroArret) {
+	protected void faireChoixArret(Autobus t, int numeroArret) {
         while(numeroArret >= (destination - 3)  && numeroArret != destination) {
         	if(this.estAssis()) {
         		if(t.aPlaceDebout()) {

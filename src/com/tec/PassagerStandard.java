@@ -13,7 +13,7 @@ class PassagerStandard extends PassagerAbstrait{
 	}
 
 	@Override
-	void faireChoixArret(Autobus t, int numeroArret) {
+	protected void faireChoixArret(Autobus t, int numeroArret) {
 		
 	}
 
