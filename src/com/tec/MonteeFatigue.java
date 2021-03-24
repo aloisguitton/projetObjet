@@ -2,8 +2,8 @@ package com.tec;
 
 public class MonteeFatigue extends PassagerAbstrait{
 
-    public MonteeFatigue(String nom, int destination) {
-        super(nom, destination);
+    public MonteeFatigue(String nom, int destination, int arret) {
+        super(nom, destination, arret);
     }
 
     public void choixPlaceMontee(Autobus t){
