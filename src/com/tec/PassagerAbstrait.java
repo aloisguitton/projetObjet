@@ -5,12 +5,34 @@ abstract class PassagerAbstrait implements Passager, Usager {
 	protected Position placeOccupee;
     protected String nom;
     protected int destination;
+    protected ArretCalme arretCalme;
+    protected ArretNerveux arretNerveux;
+    protected ArretPrudent arretPrudent;
+    protected ArretAgoraphobe arretAgoraphobe;
+    protected ArretPoli arretPoli;
 
     // constructor
-    public PassagerAbstrait(String nom, int destination) {
+    public PassagerAbstrait(String nom, int destination,int arret) {
         this.nom = nom;
         this.destination = destination;
         this.placeOccupee = Position.creer();
+        switch (arret){
+            case 1:
+                arretCalme = new ArretCalme();
+                break;
+            case 2:
+                arretNerveux = new ArretNerveux();
+                break;
+            case 3:
+                arretPrudent = new ArretPrudent();
+                break;
+            case 4:
+                arretAgoraphobe = new ArretAgoraphobe();
+                break;
+            case 5:
+                arretPoli = new ArretPoli();
+                break;
+        }
     }
     
     @Override
