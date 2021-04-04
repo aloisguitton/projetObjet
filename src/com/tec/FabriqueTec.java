@@ -2,16 +2,40 @@ package com.tec;
 
 public class FabriqueTec {
 
-    static public PassagerStandard fairePassagerStandard(String nom, int destination ) {
-        return new PassagerStandard(nom, destination);
-    }
+	static public Arret faireArretAgoraphobe() {
+		return new ArretAgoraphobe();
+	}
+	
+	static public Arret faireArretCalme() {
+		return new ArretCalme();
+	}
+	
+	static public Arret faireArretNerveux() {
+		return new ArretNerveux();
+	}
 
-    static public PassagerLunatique fairePassagerLunatique(String nom, int destination ) {
-        return new PassagerLunatique(nom,destination);
-    }
-
-    static public PassagerStresse fairePassagerStresse(String nom, int destination ) {
-        return new PassagerStresse(nom, destination);
-    }
+	static public Arret faireArretPoli() {
+		return new ArretPoli();
+	}
+	
+	static public Arret faireArretPrudent() {
+		return new ArretPrudent();
+	}
+	
+	static public PassagerAbstrait faireMonteeFatigue(String nom, int destination, Arret caractereArret) {
+		return new MonteeFatigue(nom, destination, caractereArret);
+	}
+	
+	static public PassagerAbstrait faireMonteeRepos(String nom, int destination, Arret caractereArret) {
+		return new MonteeRepos(nom, destination, caractereArret);
+	}
+	
+	static public PassagerAbstrait faireMonteeSportif(String nom, int destination, Arret caractereArret) {
+		return new MonteeSportif(nom, destination, caractereArret);
+	}
+	
+	static public PassagerAbstrait faireMonteeTetu(String nom, int destination, Arret caractereArret) {
+		return new MonteeTetu(nom, destination, caractereArret);
+	}
 
 }

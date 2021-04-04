@@ -1,6 +1,6 @@
 package com.tec;
 
-public class ArretNerveux {
+public class ArretNerveux implements Arret {
     public void choixPlaceArret(Passager p, Autobus b, int distanceDestination){
         if(p.estAssis() && b.aPlaceDebout()){
             p.changerEnDebout();
